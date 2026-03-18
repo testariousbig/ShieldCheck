@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# 🛡️ ShieldCheck
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Vulnerability Scanner for npm packages** - A modern, fast, and intuitive security analysis tool for JavaScript/TypeScript projects.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔍 **Instant Analysis** - Paste your `package.json` and get immediate results
+- 🎯 **CVSS Scoring** - Detailed CVSS v3.0, v3.1, and v4.0 breakdown with explanations
+- 🚀 **Zero Setup** - Pure frontend, no registration required
+- 📱 **Responsive Design** - Works perfectly on desktop and mobile
+- 🔗 **External Resources** - Direct links to OSV.dev, GitHub Advisory, NVD, and CWE
+- 🎨 **Cyber Theme** - Beautiful dark interface with neon accents
+- 📊 **Collapsible Interface** - Focus on what matters with expandable packages
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Online Usage
+1. Visit the deployed application
+2. Paste your `package.json` content
+3. Click **ANALYZE**
+4. Review vulnerabilities with detailed CVSS breakdowns
 
-## Expanding the ESLint configuration
+### Local Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Clone the repository
+git clone https://github.com/testariousbig/ShieldCheck.git
+cd ShieldCheck
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Start development server
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build for production
+npm run build
 ```
