@@ -53,8 +53,6 @@ export interface ScanResult {
   totalPackages: number;
   vulnerablePackages: number;
   packages: PackageInfo[];
-  isLoading: boolean;
-  error?: string;
 }
 
 export interface ParsedPackage {
