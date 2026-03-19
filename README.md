@@ -1,4 +1,4 @@
-# 🛡️ ShieldCheck
+# Shield🛡️Check
 
 **Vulnerability Scanner for npm packages** - A modern, fast, and intuitive security analysis tool for JavaScript/TypeScript projects.
 
